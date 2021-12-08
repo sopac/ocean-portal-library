@@ -1,0 +1,5 @@
+#/srv/map-portal/usr/local/share/portal/library
+ng build --prod --build-optimizer --base-href /portal/library/
+tar cfJ library.tar.xz dist/
+scp -C -i ~/Dropbox/gsd.pem library.tar.xz ubuntu@pop:/home/ubuntu/
+echo Deployed Tar.
